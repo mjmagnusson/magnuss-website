@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAGNUSS — DJ &amp; Producer</title>
+<link rel="canonical" href="https://magnussmusic.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://magnussmusic.com/">
+<meta property="og:title" content="MAGNUSS — DJ &amp; Producer">
+<meta property="og:description" content="Tech house, Latin tech and deep house. New release Tell Me You Are Afraid out now on Santurce Recordings.">
+<meta property="og:image" content="https://magnussmusic.com/assets/og-magnuss.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="MAGNUSS, DJ and producer. Tech house, Latin tech and deep house on Santurce Recordings, Diggin' Records, Mood Child and Release Your Mind.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --field:#2B2140; --field-ink:#F3EDE2; --gold:#E9B44C;
+    --paper:#F6F2EA; --ink:#1B1720; --muted:#6F6874; --rule:#DED7CB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font:400 16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+  a{color:inherit}
+  img{display:block;width:100%;height:auto}
+  .mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+  header{position:fixed;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:center;padding:18px 40px;z-index:5;color:var(--field-ink);background:transparent;transition:background .3s}
+  header.solid{background:var(--field)}
+  header .word{font:400 34px/1 "Instrument Serif",serif;letter-spacing:.02em;text-decoration:none}
+  header nav{display:flex;gap:28px}
+  header nav a{text-decoration:none}
+  header nav a:hover{color:var(--gold)}
+
+  .btns{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+  .btn{font:500 13px/1 "IBM Plex Mono";letter-spacing:.1em;text-transform:uppercase;padding:15px 22px;text-decoration:none;border:1px solid var(--field-ink)}
+  .btn.solid{background:var(--gold);border-color:var(--gold);color:var(--field)}
+
+  section{padding:110px 64px}
+  .wrap{max-width:1120px;margin:0 auto}
+  h2{font:400 56px/1 "Instrument Serif",serif;margin-bottom:48px}
+  h2 .mono{display:block;color:var(--muted);margin-bottom:14px;font-size:12px;font-family:"IBM Plex Mono"}
+
+  .releases{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .rel img{aspect-ratio:1/1;object-fit:cover}
+  .rel h3{font:400 26px/1.1 "Instrument Serif";margin-top:14px}
+  .rel .mono{color:var(--muted);margin-top:4px;font-size:11px}
+  .more{margin-top:44px;color:var(--muted)}
+  .more strong{color:var(--ink);font-weight:500}
+
+  .about{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:center}
+  .about img{aspect-ratio:4/5;object-fit:cover}
+  .about p.lead{font:400 34px/1.2 "Instrument Serif";margin-bottom:22px}
+
+  .played{border-top:1px solid var(--rule)}
+  .played div{display:grid;grid-template-columns:2fr 1fr;padding:18px 0;border-bottom:1px solid var(--rule);font:400 26px/1.2 "Instrument Serif"}
+  .played div span{font:400 12px/2.4 "IBM Plex Mono";letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
+
+  .book{background:var(--field);color:var(--field-ink);text-align:center}
+  .book h2{margin-bottom:20px}
+  .book a.mail{font:400 italic 44px/1.2 "Instrument Serif";color:var(--gold);text-decoration:none;border-bottom:1px solid currentColor}
+  .book p{margin-top:18px;opacity:.75}
+
+  footer{background:var(--field);color:#B9B1C4;padding:0 64px 40px;display:flex;justify-content:center;gap:28px}
+  footer a{text-decoration:none}
+
+
+  .newest{border-top:1px solid var(--rule)}
+  .newest a{display:grid;grid-template-columns:2fr 1.3fr 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--rule);font:400 30px/1.15 "Instrument Serif";text-decoration:none}
+  .newest a span{font:400 12px/2.6 "IBM Plex Mono";letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .newest a span:last-child{text-align:right}
+  .newest a:hover{color:#6B4FA0}
+  .releases{grid-template-columns:repeat(5,1fr);gap:24px}
+  a.rel{text-decoration:none;display:block}
+  a.rel:hover h3{text-decoration:underline;text-underline-offset:4px}
+  .more a{color:var(--ink);font-weight:500}
+  .hero p strong{font-weight:500;color:var(--gold)}
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:96px 64px 80px;overflow:hidden;background:var(--field);color:var(--field-ink)}
+  .hero .bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .hero .tint{position:absolute;inset:0;z-index:1;background:rgba(24,17,38,.70)}
+  .hero .copy{position:relative;z-index:2;max-width:760px}
+  .hero .copy .btns{justify-content:center}
+  .hero .copy .mono{color:var(--gold)}
+  .hero h1{font:400 128px/0.9 "Instrument Serif",serif;margin:18px 0 22px;letter-spacing:-0.01em}
+  .hero h1 em{font-style:italic}
+  .hero p{font-size:19px;max-width:520px;margin:0 auto}
+  header .word{transition:opacity .3s}
+  header:not(.solid) .word{opacity:0;pointer-events:none}
+  .hero .scroll{position:absolute;left:50%;transform:translateX(-50%);bottom:40px;z-index:2;color:var(--field-ink)}
+  .wall{position:absolute;inset:-4%;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;transform:rotate(-4deg)}
+  .wall .col{display:flex;flex-direction:column;gap:14px;animation:rise 90s linear infinite}
+  .wall .col:nth-child(2n){animation-direction:reverse;animation-duration:110s}
+  .wall .col:nth-child(3){animation-duration:75s}
+  .wall img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+  @keyframes rise{to{transform:translateY(calc(-50% - 7px))}}
+  @media (max-width:900px){
+    .hero{padding:88px 16px 64px}
+    .hero h1{font-size:68px}
+    .hero p{font-size:17px}
+    .hero .scroll{display:none}
+    .wall{grid-template-columns:repeat(2,1fr)}
+    .wall .col:nth-child(n+3){display:none}
+  }
+  @media (prefers-reduced-motion:reduce){.hero .bg *{animation:none!important}}
+
+  @media (max-width:900px){
+    header{padding:14px 16px}
+    header nav{display:none}
+    section{padding:72px 16px}
+    h2{font-size:42px}
+    .releases{grid-template-columns:1fr 1fr;gap:18px}
+    .newest a{grid-template-columns:1fr;gap:2px;font-size:24px}
+    .newest a span,.newest a span:last-child{text-align:left;line-height:1.8}
+    .about{grid-template-columns:1fr;gap:32px}
+    .played div{font-size:21px}
+    .book a.mail{font-size:28px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <a class="word" href="#top">Magnuss</a>
+  <nav class="mono">
+    <a href="#music">Music</a><a href="#about">About</a><a href="#played">Played</a><a href="#booking">Booking</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="bg" aria-hidden="true"><div class="wall"><div class="col"><img src="assets/magnuss-art-puestadelsol.jpg" alt=""><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-abstract-gold.jpg" alt=""><img src="assets/magnuss-art-puestadelsol.jpg" alt=""><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-abstract-gold.jpg" alt=""></div><div class="col"><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-abstract-gold.jpg" alt=""><img src="assets/magnuss-art-puestadelsol.jpg" alt=""><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-abstract-gold.jpg" alt=""><img src="assets/magnuss-art-puestadelsol.jpg" alt=""><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""></div><div class="col"><img src="assets/magnuss-art-abstract-gold.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-puestadelsol.jpg" alt=""><img src="assets/magnuss-art-abstract-gold.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-puestadelsol.jpg" alt=""></div><div class="col"><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-abstract-gold.jpg" alt=""><img src="assets/magnuss-art-puestadelsol.jpg" alt=""><img src="assets/magnuss-art-boricua.jpg" alt=""><img src="assets/magnuss-art-dreamymoods.jpg" alt=""><img src="assets/magnuss-art-plataoplomo.jpg" alt=""><img src="assets/magnuss-art-poppin.jpg" alt=""><img src="assets/magnuss-art-abstract-gold.jpg" alt=""><img src="assets/magnuss-art-puestadelsol.jpg" alt=""></div></div></div>
+  <div class="tint"></div>
+  <div class="copy">
+    <div class="mono">DJ &amp; Producer · Tech house · Latin tech · Deep house</div>
+    <h1>Magnuss</h1>
+    <p>New release <strong>Tell Me You Are Afraid</strong> is out now on Santurce Recordings. <strong>Oh Que Sera</strong> follows on 4&nbsp;December.</p>
+    <div class="btns">
+      <a class="btn solid" href="https://open.spotify.com/artist/5jfgv6w7yhUo6eN6L28d2D" target="_blank" rel="noopener">Listen</a>
+      <a class="btn" href="https://www.beatport.com/release/tell-me-you-are-afraid/7560416" target="_blank" rel="noopener">New on Beatport</a>
+      <a class="btn" href="#booking">Book</a>
+    </div>
+  </div>
+  <a class="scroll mono" href="#music">Scroll ↓</a>
+</section>
+
+<section id="music">
+  <div class="wrap">
+    <h2><span class="mono">Out now and coming up</span>New music</h2>
+    <div class="newest">
+      <a href="https://www.beatport.com/release/oh-que-sera/7656821" target="_blank" rel="noopener">Oh Que Sera <span>Santurce Recordings</span><span>Out 4 Dec 2026 · Pre-order</span></a>
+      <a href="https://www.beatport.com/release/tell-me-you-are-afraid/7560416" target="_blank" rel="noopener">Tell Me You Are Afraid <span>Santurce Recordings</span><span>6 Nov 2026</span></a>
+      <a href="https://www.beatport.com/release/ade-sampler-2026/7452177" target="_blank" rel="noopener">ADE Sampler 2026 <span>Santurce Recordings · Various artists</span><span>16 Oct 2026</span></a>
+    </div>
+
+    <h2 style="margin-top:96px"><span class="mono">Discography</span>Releases</h2>
+    <div class="releases">
+      <a class="rel" href="https://www.beatport.com/release/la-puesta-de-sol/5694149" target="_blank" rel="noopener"><img src="assets/magnuss-art-puestadelsol.jpg" alt="La Puesta de Sol EP cover"><h3>La Puesta de Sol</h3><div class="mono">EP · Diggin' Records · 2026</div></a>
+      <a class="rel" href="https://www.beatport.com/release/dreamy-moods-vol-2/7029284" target="_blank" rel="noopener"><img src="assets/magnuss-art-dreamymoods.jpg" alt="Dreamy Moods Vol. 2 cover"><h3>Dreamy Moods Vol. 2</h3><div class="mono">Various artists · Mood Child · 2026</div></a>
+      <a class="rel" href="https://www.beatport.com/release/boricua/4613112" target="_blank" rel="noopener"><img src="assets/magnuss-art-boricua.jpg" alt="Boricua cover"><h3>Boricua</h3><div class="mono">Release Your Mind · 2024</div></a>
+      <a class="rel" href="https://www.beatport.com/release/plata-o-plomo/3950128" target="_blank" rel="noopener"><img src="assets/magnuss-art-plataoplomo.jpg" alt="Plata o Plomo cover"><h3>Plata o Plomo</h3><div class="mono">Release Your Mind · 2022</div></a>
+      <a class="rel" href="https://www.beatport.com/release/poppin/3747046" target="_blank" rel="noopener"><img src="assets/magnuss-art-poppin.jpg" alt="Poppin' cover"><h3>Poppin'</h3><div class="mono">Release Your Mind · 2022</div></a>
+    </div>
+    <p class="more">Also out: <a href="https://www.beatport.com/track/dani-calif/29218691" target="_blank" rel="noopener">Dani Calif</a> (Mood Child, 2026), <a href="https://www.beatport.com/release/estrella-extended-mix/5457241" target="_blank" rel="noopener">Estrella</a> (Release Your Mind, 2025), <a href="https://www.beatport.com/track/i-can-feel-it/21195850" target="_blank" rel="noopener">I Can Feel It</a> (Spectrum, 2025), <a href="https://www.beatport.com/release/dj-request-extended-mix/4685152" target="_blank" rel="noopener">DJ Request</a> (2024), <a href="https://www.beatport.com/release/terrified-extended-mix/4493218" target="_blank" rel="noopener">Terrified</a> (2024), <a href="https://www.beatport.com/release/tus-labios/4228737" target="_blank" rel="noopener">Tus Labios</a> (2023). <a href="https://www.beatport.com/artist/magnuss/710781" target="_blank" rel="noopener">Full discography on Beatport →</a></p>
+  </div>
+</section>
+
+<section id="about" style="padding-top:0">
+  <div class="wrap about">
+    <img src="assets/magnuss-portrait.jpg" alt="MAGNUSS portrait">
+    <div>
+      <p class="lead">Half Swedish, half Puerto Rican, born in Spain.</p>
+      <p>MAGNUSS is a DJ and producer making tech house, Latin tech and deep house. He releases on Santurce Recordings, Diggin' Records, Mood Child and Release Your Mind Records. His EP La Puesta de Sol, written in Puerto Rico, came out on Diggin' Records in January 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section id="played" style="padding-top:0">
+  <div class="wrap">
+    <h2><span class="mono">Live</span>Played</h2>
+    <div class="played">
+      <div>Lynn Worldwide <span>Paris</span></div>
+      <div>Diggin' Records <span>Amsterdam</span></div>
+      <div>Club 5th Avenue <span></span></div>
+      <div>Live set <span>Arnhem</span></div>
+      <div>Radio Underground <span>Puerto Rico</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="booking">
+  <h2>Booking</h2>
+  <a class="mail" href="mailto:nimrod@pulsartalents.com?subject=Booking%20request%20%2F%20MAGNUSS">nimrod@pulsartalents.com</a>
+  <p>Nimrod · Pulsar Talents</p>
+</section>
+<footer class="mono">
+  <a href="https://soundcloud.com/magnussmusic" target="_blank" rel="noopener">SoundCloud</a>
+  <a href="https://open.spotify.com/artist/5jfgv6w7yhUo6eN6L28d2D" target="_blank" rel="noopener">Spotify</a>
+  <a href="https://www.beatport.com/artist/magnuss/710781" target="_blank" rel="noopener">Beatport</a>
+  <a href="https://www.instagram.com/magnussmusic/" target="_blank" rel="noopener">Instagram</a>
+</footer>
+<script>
+  const h=document.querySelector('header'),hero=document.querySelector('.hero');
+  const f=()=>h.classList.toggle('solid',scrollY>hero.offsetHeight-80);f();addEventListener('scroll',f,{passive:true});
+  const v=document.querySelector('.hero video');
+  if(v&&matchMedia('(prefers-reduced-motion:reduce)').matches){v.removeAttribute('autoplay');v.pause();}
+</script>
+</body>
+</html>
